@@ -1,9 +1,10 @@
 import time
+import os
 import phonenumbers
 import sqlalchemy
 from models import orders, session
 
-SLEEP_TIME = 180
+SLEEP_TIME = os.getenv("SLEEP_TIME", 180)
 
 
 def normalise_phone_num(phone_num):
